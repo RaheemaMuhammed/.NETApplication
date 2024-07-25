@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+}
+@model WebApplication1.Models.Customer
+
+<h2>Edit Customer</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="CustomerId" />
+    <div class="form-group mb-2">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" asp-for="FirstName" required>
+    </div>
+    <div class="form-group mb-2">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" asp-for="LastName" required>
+    </div>
+    <div class="form-group mb-2">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" asp-for="Email" required>
+    </div>
+    <div class="form-group mb-2">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" asp-for="Phone" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
